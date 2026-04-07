@@ -9,7 +9,7 @@ API_URL = "https://api.quotable.io/random"
 def fetch_quote():
     """Fetches a random quote from the ZenQuotes API."""
     try:
-        # ZenQuotes is a very reliable alternative
+        # ZenQuotes API
         response = requests.get("https://zenquotes.io/api/random", timeout=10)
         response.raise_for_status()
         data = response.json()
@@ -28,22 +28,20 @@ def fetch_quote():
 def main():
     st.set_page_config(page_title="Quote Gen", page_icon="📜")
 
-    st.title("🌟 Random Quote Engine")
+    st.title(" Random Quote Engine ")
     st.write("Need inspiration? Click the button below.")
 
     quote_container = st.container()
 
-    if st.button('✨ Generate New Quote', use_container_width=True):
+    if st.button('Generate New Quote', use_container_width=True):
         with st.spinner('Fetching wisdom...'):
             data = fetch_quote()
             
             if data:
                 with quote_container:
                     st.markdown("---")
-                    # data['content'] and data['author'] exist in our new fetch function
                     st.subheader(f"\"{data['content']}\"")
                     st.write(f"**— {data['author']}**")
-                    # REMOVED the Tags line because ZenQuotes doesn't provide them
                     st.markdown("---")
             else:
                 st.warning("We couldn't grab a quote. Check your internet connection!")
