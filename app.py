@@ -5,16 +5,6 @@ import requests
 API_URL = "https://api.quotable.io/random"
 
 # --- LOGIC: FETCHING DATA ---
-# def fetch_quote():
-#     """Fetches a random quote from the API."""
-#     try:
-#         # We use a timeout so the app doesn't hang forever if the internet is slow
-#         response = requests.get(API_URL, timeout=5, verify=False)
-#         response.raise_for_status() # Check if the request was successful
-#         return response.json()
-#     except requests.exceptions.RequestException as e:
-#         st.error(f"Connection Error: {e}")
-#         return None
 
 def fetch_quote():
     """Fetches a random quote from the ZenQuotes API."""
@@ -34,31 +24,6 @@ def fetch_quote():
         return None
 
 # --- INTERFACE: STREAMLIT UI ---
-# def main():
-#     # Set the page title and icon
-#     st.set_page_config(page_title="Quote Gen", page_icon="📜")
-
-#     # Header section
-#     st.title("🌟 Random Quote Engine")
-#     st.write("Need inspiration? Click the button below to pull a quote from the web.")
-
-#     # Container for the quote to keep the layout clean
-#     quote_container = st.container()
-
-#     # The Button - This is the "Trigger"
-#     if st.button('✨ Generate New Quote', use_container_width=True):
-#         with st.spinner('Fetching wisdom...'):
-#             data = fetch_quote()
-            
-#             if data:
-#                 with quote_container:
-#                     st.markdown("---")
-#                     st.subheader(f"\"{data['content']}\"")
-#                     st.write(f"**— {data['author']}**")
-#                     st.caption(f"Tags: {', '.join(data['tags'])}")
-#                     st.markdown("---")
-#             else:
-#                 st.warning("We couldn't grab a quote. Check your internet connection!")
 
 def main():
     st.set_page_config(page_title="Quote Gen", page_icon="📜")
