@@ -27,6 +27,7 @@ streamlit run app.py
 
 The app will automatically open in your default browser at http://localhost:8501.
 
+
 🛠️ Built With
 Python - The core programming language.
 
