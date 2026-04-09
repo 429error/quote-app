@@ -7,7 +7,7 @@ Built with **Streamlit** and powered by the **ZenQuotes API**.
 * **Instant Generation:** Get a new, hand-picked quote with a single click.
 * **Dynamic UI:** Clean, responsive web interface.
 * **External API Integration:** Connects live to `zenquotes.io` for an endless supply of inspiration.
-* **Custom Styling:** Enhanced with CSS for a modern dark look and feel.
+* **Custom Styling:** Enhanced with CSS for a modern look and feel.
 
 ## Getting Started
 
