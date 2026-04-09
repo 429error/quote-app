@@ -28,7 +28,8 @@ streamlit run app.py
 The app will automatically open in your default browser at http://localhost:8501.
 
 
-🛠️ Built With
+### 🛠️ Built With
+
 Python - The core programming language.
 
 Streamlit - The framework used for the web interface.
@@ -37,7 +38,8 @@ Requests - For handling HTTP calls to the API.
 
 ZenQuotes API - The source of the random quotes.
 
-📝 How it Works
+
+### 📝 How it Works
 When the "Generate" button is clicked, a GET request is sent to the ZenQuotes API.
 
 The script parses the returned JSON data.
